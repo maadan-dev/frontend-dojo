@@ -10,7 +10,11 @@
     "test": "vitest run",
     "test:watch": "vitest",
     "test:phase1": "vitest run 01-web-foundations",
-    "test:phase2": "vitest run 02-core-javascript-and-dom"
+    "test:phase2": "vitest run 02-core-javascript-and-dom",
+    "test:phase3": "vitest run 03-async-js-and-tooling",
+    "test:phase4": "vitest run 04-react-foundations",
+    "test:phase5": "vitest run 05-routing-and-state-architecture",
+    "test:phase6": "vitest run 06-enterprise-state-and-performance"
   },
   "dependencies": {
     "react": "^18.3.1",
