@@ -1,0 +1,35 @@
+.hero-title {
+  font-size: clamp(1.5rem, 4vw + 1rem, 3rem);
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.card-deck {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.deck-card {
+  padding: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 8px;
+}
+
+@media (min-width: 768px) {
+  .card-deck {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
+  .deck-card {
+    flex: 1 1 calc(50% - 16px);
+  }
+}
+
+@media (min-width: 1024px) {
+  .deck-card {
+    flex: 1 1 calc(33.333% - 16px);
+  }
+}

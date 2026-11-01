@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accessible AI Prompt Form</title>
+</head>
+<body>
+  <h2 id="form-title">AI Inference Playground</h2>
+
+  <form aria-labelledby="form-title">
+    <div>
+      <label for="prompt-input">User Prompt</label>
+      <p id="prompt-hint">Enter up to 2000 characters for the model to analyze.</p>
+      <textarea
+        id="prompt-input"
+        name="prompt"
+        required
+        aria-describedby="prompt-hint"
+        rows="4"
+        cols="50"
+      ></textarea>
+    </div>
+
+    <div>
+      <label for="model-select">Select Model Architecture</label>
+      <select id="model-select" name="model">
+        <option value="gemini-3.8-flash">Gemini 3.8 Flash (Low Latency)</option>
+        <option value="gemini-3.8-pro">Gemini 3.8 Pro (High Reasoning)</option>
+      </select>
+    </div>
+
+    <div>
+      <label for="temperature-slider">Temperature (Creativity)</label>
+      <input
+        type="range"
+        id="temperature-slider"
+        name="temperature"
+        min="0"
+        max="2"
+        step="0.1"
+        value="0.7"
+      />
+    </div>
+
+    <div>
+      <button type="submit">Execute Inference</button>
+    </div>
+  </form>
+
+  <section>
+    <h3>Model Output Stream</h3>
+    <div id="streaming-output" aria-live="polite" aria-atomic="true">
+      <!-- Streaming tokens will be inserted here dynamically -->
+    </div>
+  </section>
+</body>
+</html>

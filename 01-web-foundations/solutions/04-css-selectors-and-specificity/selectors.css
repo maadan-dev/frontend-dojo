@@ -1,0 +1,21 @@
+.agent-list > li {
+  padding: 12px 0;
+}
+
+h2 + p {
+  font-weight: bold;
+  color: #333;
+}
+
+input[type="password"] {
+  border: 2px solid crimson;
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
